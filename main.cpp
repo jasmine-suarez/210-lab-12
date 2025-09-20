@@ -58,7 +58,10 @@ int main() {
         cout << " found in position " << it - gasPrices.begin() << endl;
     else
         cout << " was not found.\n";
-    cout << "   Value: " << *it << endl;
+    
+    array<double, DAYS> station1;
+    fill(station1.begin(), station1.end(), 4.00);
+    cout << "12. ;
 
     return 0;
 }
