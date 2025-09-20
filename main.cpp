@@ -31,6 +31,14 @@ int main() {
 
     cout << "2. First day price: " << gasPrices.front() << endl;
     cout << "3. Last day price: " << gasPrices.back() << endl;
+    cout << "4. Day 15 price: " << gasPrices.at(14) << endl;
+    cout << "5. Address: " << gasPrices.data() << endl;
+
+    cout << "6. Highest price: " << *max_element(gasPrices.begin(), gasPrices.end()) << endl;
+    cout << "7. Lowest price: " << *min_element(gasPrices.begin(), gasPrices.end()) << endl;
+    
+    double avg = accumulate(gasPrices.begin(), gasPrices.end(), 0.0) / DAYS;
+    cout << "8. Average price: " << avg << endl;
 
     return 0;
 }
