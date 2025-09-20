@@ -28,7 +28,7 @@ int main() {
 
     cout << "===== GAS PRICE TRACKER =====" << endl;
 
-    cout << "1. Gas prices from the last " << gasPrices.size() << " days:" << endl;
+    cout << "1. Gas Station 1 prices from the last " << gasPrices.size() << " days:" << endl;
     for (double val : gasPrices) cout << val << " "; cout << endl;
 
     cout << "2. First day price: " << gasPrices.front() << endl;
@@ -59,12 +59,12 @@ int main() {
     else
         cout << " was not found.\n";
     
+    // Station 2 with one value
     array<double, DAYS> station2;
     fill(station2.begin(), station2.end(), 4.00);
     cout << "12. Gas Station 2 first price: " << station2.front() << endl;
     gasPrices.swap(station2);
-    cout << "13. After swap with gas station 1: " << gasPrices.front() << endl;
-
+    cout << "13. After swap, Station 1 first price: " << gasPrices.front() << endl;
 
     return 0;
 }
