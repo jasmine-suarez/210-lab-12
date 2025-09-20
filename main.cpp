@@ -38,9 +38,9 @@ int main() {
     cout << "7. Lowest price: " << *min_element(gasPrices.begin(), gasPrices.end()) << endl;
     
     double avg = accumulate(gasPrices.begin(), gasPrices.end(), 0.0) / DAYS;
-    cout << "8. Average price: " << avg << endl;
+    cout << "8. Average price: " << avg << endl; // FIX: limit to 2 decimal places
 
 
-    // break time
+    // break time,
     return 0;
 }
