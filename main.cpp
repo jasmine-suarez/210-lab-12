@@ -6,6 +6,7 @@
 #include <numeric>
 #include <array>
 #include <fstream>
+#include <iomanip>
 using namespace std;
 
 const int DAYS = 30;
@@ -36,11 +37,15 @@ int main() {
 
     cout << "6. Highest price: " << *max_element(gasPrices.begin(), gasPrices.end()) << endl;
     cout << "7. Lowest price: " << *min_element(gasPrices.begin(), gasPrices.end()) << endl;
-    
     double avg = accumulate(gasPrices.begin(), gasPrices.end(), 0.0) / DAYS;
-    cout << "8. Average price: " << avg << endl; // FIX: limit to 2 decimal places
+    cout << fixed << setprecision(2) << "8. Average price: " << avg << endl;
 
+    sort(gasPrices.begin(), gasPrices.end());
+    cout << "9. Sorted: ";
+    for (double val : gasPrices) cout << val << " "; cout << endl;
+    sort(gasPrices.rbegin(), gasPrices.rend());
+    cout << "10. Reverse sorted: ";
+    for (double val : gasPrices) cout << val << " "; cout << endl;
 
-    // break time,
     return 0;
 }
