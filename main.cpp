@@ -40,5 +40,7 @@ int main() {
     double avg = accumulate(gasPrices.begin(), gasPrices.end(), 0.0) / DAYS;
     cout << "8. Average price: " << avg << endl;
 
+
+    // break time
     return 0;
 }
