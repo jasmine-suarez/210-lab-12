@@ -31,6 +31,7 @@ int main() {
     cout << "1. Gas Station 1 prices from the last " << gasPrices.size() << " days:" << endl;
     for (double val : gasPrices) cout << val << " "; cout << endl;
 
+    // stats
     cout << "2. First day price: " << gasPrices.front() << endl;
     cout << "3. Last day price: " << gasPrices.back() << endl;
     cout << "4. Day 15 price: " << gasPrices.at(14) << endl;
