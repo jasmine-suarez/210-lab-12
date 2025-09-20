@@ -14,6 +14,7 @@ const int DAYS = 30;
 int main() {
     array<double, DAYS> gasPrices;
 
+    // Read from file
     ifstream fin;
     fin.open("gas_prices.txt");
     if (fin.good()) {
@@ -40,12 +41,24 @@ int main() {
     double avg = accumulate(gasPrices.begin(), gasPrices.end(), 0.0) / DAYS;
     cout << fixed << setprecision(2) << "8. Average price: " << avg << endl;
 
+    // sort elements
     sort(gasPrices.begin(), gasPrices.end());
     cout << "9. Sorted: ";
     for (double val : gasPrices) cout << val << " "; cout << endl;
     sort(gasPrices.rbegin(), gasPrices.rend());
     cout << "10. Reverse sorted: ";
     for (double val : gasPrices) cout << val << " "; cout << endl;
+
+    // find an element
+    double target = 4.33;
+    array<double, DAYS>::iterator it;
+    it = find(gasPrices.begin(), gasPrices.end(), target);
+    cout << "11. Value " << target;
+    if (it != gasPrices.end())
+        cout << " found in position " << it - gasPrices.begin() << endl;
+    else
+        cout << " was not found.\n";
+    cout << "   Value: " << *it << endl;
 
     return 0;
 }
