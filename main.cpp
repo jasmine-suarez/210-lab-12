@@ -59,9 +59,12 @@ int main() {
     else
         cout << " was not found.\n";
     
-    array<double, DAYS> station1;
-    fill(station1.begin(), station1.end(), 4.00);
-    cout << "12. ;
+    array<double, DAYS> station2;
+    fill(station2.begin(), station2.end(), 4.00);
+    cout << "12. Gas Station 2 first price: " << station2.front() << endl;
+    gasPrices.swap(station2);
+    cout << "13. After swap with gas station 1: " << gasPrices.front() << endl;
+
 
     return 0;
 }
