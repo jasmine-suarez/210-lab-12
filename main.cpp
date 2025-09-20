@@ -24,12 +24,13 @@ int main() {
     else
         cout << "File not found.\n";
 
-    // testing if file is successfully accessed
-    for (int i = 0; i < DAYS; i++) {
-        cout << gasPrices[i] << ", ";
-    }
+    cout << "===== GAS PRICE TRACKER =====" << endl;
 
-    cout << "Gas prices from the last " << gasPrices.size() << ""
+    cout << "1. Gas prices from the last " << gasPrices.size() << " days:" << endl;
+    for (double val : gasPrices) cout << val << " "; cout << endl;
+
+    cout << "2. First day price: " << gasPrices.front() << endl;
+    cout << "3. Last day price: " << gasPrices.back() << endl;
 
     return 0;
 }
